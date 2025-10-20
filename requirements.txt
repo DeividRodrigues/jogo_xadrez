@@ -1,0 +1,5 @@
+# Jogo de Xadrez em Python
+# Este projeto usa apenas bibliotecas padrão do Python 3.6+
+
+# Não há dependências externas necessárias
+# O jogo funciona com Python 3.6 ou superior
