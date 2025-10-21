@@ -11,6 +11,24 @@ Um jogo de xadrez completo implementado em Python com interface de linha de coma
 - **Histórico de movimentos** e comandos especiais
 - **Símbolos Unicode** para visualização das peças
 
+## 🎓 Objetivos Educacionais
+
+Este projeto demonstra conceitos específicos de programação:
+
+### 1. Estruturas de Repetição Simples (for, while)
+- **Torre**: FOR + WHILE para movimentos lineares
+- **Bispo**: FOR + WHILE para movimentos diagonais
+- **Rainha**: FOR + WHILE para movimentos combinados
+
+### 2. Loops Aninhados
+- **Cavalo**: FOR dentro de FOR para movimento complexo em "L"
+- **8 Movimentos**: Combinações de distância e passo
+
+### 3. Recursividade e Loops Complexos
+- **Análise Recursiva**: Busca de caminhos de ataque
+- **Loops Complexos**: Verificação de segurança com múltiplas condições
+- **Validações Avançadas**: Xeque, capturas, bloqueios
+
 ## 🚀 Como Executar
 
 ### Pré-requisitos
@@ -56,11 +74,16 @@ python3 chess_game.py
 
 ```
 desafio_pecas_xadrez/
-├── chess_pieces.py      # Classes das peças de xadrez
-├── chess_board.py       # Classe do tabuleiro e lógica do jogo
-├── chess_game.py        # Interface principal e loop do jogo
-├── requirements.txt     # Dependências (apenas Python padrão)
-└── README.md           # Este arquivo
+├── chess_pieces.py              # Classes das peças de xadrez
+├── chess_pieces_enhanced.py     # Versão com conceitos educacionais
+├── chess_board.py               # Classe do tabuleiro e lógica do jogo
+├── chess_game.py                # Interface principal e loop do jogo
+├── example.py                   # Exemplos e testes básicos
+├── concepts_demo.py             # Demonstração dos conceitos
+├── educational_examples.py     # Exemplos educacionais detalhados
+├── CONCEITOS_EDUCACIONAIS.md   # Documentação dos conceitos
+├── requirements.txt             # Dependências (apenas Python padrão)
+└── README.md                   # Este arquivo
 ```
 
 ## 🧩 Componentes
@@ -121,9 +144,10 @@ O código é modular e facilmente extensível:
 
 ## 📝 Exemplos de Uso
 
+### Jogo Principal
 ```bash
 # Iniciar o jogo
-python chess_game.py
+python3 chess_game.py
 
 # Durante o jogo:
 Digite seu movimento: e2-e4
@@ -137,6 +161,18 @@ Digite seu movimento: moves
 
 # Sair do jogo
 Digite seu movimento: quit
+```
+
+### Demonstrações Educacionais
+```bash
+# Demonstração completa dos conceitos
+python3 concepts_demo.py
+
+# Exemplos educacionais detalhados
+python3 educational_examples.py
+
+# Exemplos básicos
+python3 example.py
 ```
 
 ## 🤝 Contribuição
