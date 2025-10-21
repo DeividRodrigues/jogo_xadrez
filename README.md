@@ -1,188 +1,156 @@
-# 🏁 Jogo de Xadrez em Python
+# 🏁 Desafio: Movimentando as Peças do Xadrez
 
-Um jogo de xadrez completo implementado em Python com interface de linha de comando, incluindo todas as regras básicas e movimentação de peças.
+Este projeto implementa uma simulação de movimentos de peças de xadrez em C, demonstrando o uso de diferentes estruturas de repetição.
 
-## 🎯 Características
+## 🎯 Objetivo
 
-- **Tabuleiro completo** com todas as peças de xadrez
-- **Movimentação realista** seguindo as regras do xadrez
-- **Interface de linha de comando** intuitiva
-- **Validação de movimentos** completa
-- **Histórico de movimentos** e comandos especiais
-- **Símbolos Unicode** para visualização das peças
+Criar um programa em C que simule o movimento de três peças de xadrez:
+- **Torre**: Move-se em linha reta (horizontal/vertical)
+- **Bispo**: Move-se na diagonal
+- **Rainha**: Move-se em todas as direções
 
-## 🎓 Objetivos Educacionais
+## 📋 Requisitos Atendidos
 
-Este projeto demonstra conceitos específicos de programação:
+### ✅ Estruturas de Repetição
+- **Torre**: FOR loop (5 casas para a direita)
+- **Bispo**: WHILE loop (5 casas na diagonal)
+- **Rainha**: DO-WHILE loop (8 casas para a esquerda)
 
-### 1. Estruturas de Repetição Simples (for, while)
-- **Torre**: FOR + WHILE para movimentos lineares
-- **Bispo**: FOR + WHILE para movimentos diagonais
-- **Rainha**: FOR + WHILE para movimentos combinados
+### ✅ Funcionalidades
+- ✅ Entrada de dados definida no código
+- ✅ Lógica de movimentação específica para cada peça
+- ✅ Saída formatada com printf
+- ✅ Comentários explicativos
+- ✅ Código organizado e legível
 
-### 2. Loops Aninhados
-- **Cavalo**: FOR dentro de FOR para movimento complexo em "L"
-- **8 Movimentos**: Combinações de distância e passo
+## 🚀 Como Compilar e Executar
 
-### 3. Recursividade e Loops Complexos
-- **Análise Recursiva**: Busca de caminhos de ataque
-- **Loops Complexos**: Verificação de segurança com múltiplas condições
-- **Validações Avançadas**: Xeque, capturas, bloqueios
-
-## 🚀 Como Executar
-
-### Pré-requisitos
-- Python 3.6 ou superior
-
-### Instalação e Execução
-
-1. Clone ou baixe o projeto:
+### Compilação
 ```bash
-git clone <url-do-repositorio>
-cd desafio_pecas_xadrez
+gcc -o xadrez xadrez.c
 ```
 
-2. Execute o jogo:
+### Execução
 ```bash
-python chess_game.py
+./xadrez
 ```
 
-Ou se preferir executar diretamente:
-```bash
-python3 chess_game.py
-```
-
-## 🎮 Como Jogar
-
-### Movimentos
-- Digite movimentos no formato: `origem-destino`
-- Exemplo: `e2-e4` (move peão de e2 para e4)
-- Use coordenadas de xadrez: a-h (colunas), 1-8 (linhas)
-
-### Comandos Especiais
-- `help` ou `h` - Exibe ajuda
-- `quit` ou `q` - Sai do jogo
-- `reset` ou `r` - Reinicia o jogo
-- `history` - Mostra histórico de movimentos
-- `moves` - Mostra movimentos possíveis
-
-### Peças
-- **Brancas**: ♔♕♖♗♘♙
-- **Pretas**: ♚♛♜♝♞♟
-
-## 📁 Estrutura do Projeto
+## 📊 Saída do Programa
 
 ```
-desafio_pecas_xadrez/
-├── chess_pieces.py              # Classes das peças de xadrez
-├── chess_pieces_enhanced.py     # Versão com conceitos educacionais
-├── chess_board.py               # Classe do tabuleiro e lógica do jogo
-├── chess_game.py                # Interface principal e loop do jogo
-├── example.py                   # Exemplos e testes básicos
-├── concepts_demo.py             # Demonstração dos conceitos
-├── educational_examples.py     # Exemplos educacionais detalhados
-├── CONCEITOS_EDUCACIONAIS.md   # Documentação dos conceitos
-├── requirements.txt             # Dependências (apenas Python padrão)
-└── README.md                   # Este arquivo
+========================================
+    SIMULACAO DE MOVIMENTOS DE XADREZ   
+========================================
+
+PEÇA: TORRE
+Movimento: 5 casas para a DIREITA
+Estrutura de repetição: FOR
+Direção do movimento:
+------------------------
+Casa 1: Direita
+Casa 2: Direita
+Casa 3: Direita
+Casa 4: Direita
+Casa 5: Direita
+
+PEÇA: BISPO
+Movimento: 5 casas na DIAGONAL (cima e direita)
+Estrutura de repetição: WHILE
+Direção do movimento:
+------------------------
+Casa 1: Cima, Direita
+Casa 2: Cima, Direita
+Casa 3: Cima, Direita
+Casa 4: Cima, Direita
+Casa 5: Cima, Direita
+
+PEÇA: RAINHA
+Movimento: 8 casas para a ESQUERDA
+Estrutura de repetição: DO-WHILE
+Direção do movimento:
+------------------------
+Casa 1: Esquerda
+Casa 2: Esquerda
+Casa 3: Esquerda
+Casa 4: Esquerda
+Casa 5: Esquerda
+Casa 6: Esquerda
+Casa 7: Esquerda
+Casa 8: Esquerda
+
+========================================
+           RESUMO DOS MOVIMENTOS       
+========================================
+Torre:   5 casas para a DIREITA (FOR)
+Bispo:   5 casas na DIAGONAL (WHILE)
+Rainha:  8 casas para a ESQUERDA (DO-WHILE)
+========================================
+
+Simulacao concluida com sucesso!
+Todas as pecas executaram seus movimentos.
 ```
 
-## 🧩 Componentes
+## 🧩 Estrutura do Código
 
-### `chess_pieces.py`
-Contém todas as classes das peças:
-- `Piece` (classe base abstrata)
-- `Pawn`, `Rook`, `Knight`, `Bishop`, `Queen`, `King`
-
-Cada peça implementa:
-- `get_possible_moves()` - Calcula movimentos válidos
-- `get_symbol()` - Retorna símbolo Unicode da peça
-- Validação de posições e capturas
-
-### `chess_board.py`
-Gerencia o tabuleiro e lógica do jogo:
-- Inicialização das peças
-- Validação de movimentos
-- Histórico de jogadas
-- Detecção de fim de jogo
-
-### `chess_game.py`
-Interface principal do jogo:
-- Parser de notação de xadrez
-- Comandos interativos
-- Visualização do tabuleiro
-- Loop principal do jogo
-
-## 🎯 Regras Implementadas
-
-### Movimentos Básicos
-- **Peão**: Movimento direto, captura diagonal, movimento duplo inicial
-- **Torre**: Movimento horizontal e vertical ilimitado
-- **Cavalo**: Movimento em L (2+1 casas)
-- **Bispo**: Movimento diagonal ilimitado
-- **Rainha**: Combinação de torre e bispo
-- **Rei**: Movimento de uma casa em qualquer direção
-
-### Validações
-- ✅ Verificação de limites do tabuleiro
-- ✅ Prevenção de captura de peças próprias
-- ✅ Verificação de bloqueios no caminho
-- ✅ Alternância correta de jogadores
-
-## 🔧 Personalização
-
-O código é modular e facilmente extensível:
-
-1. **Adicionar novas regras**: Modifique as classes de peças em `chess_pieces.py`
-2. **Melhorar interface**: Edite `chess_game.py` para melhor UX
-3. **Implementar novas funcionalidades**: Adicione métodos em `chess_board.py`
-
-## 🐛 Limitações Atuais
-
-- Detecção de xeque/xeque-mate simplificada
-- Não implementa roque, en passant ou promoção de peões
-- Sem detecção de empates por repetição ou posição
-
-## 📝 Exemplos de Uso
-
-### Jogo Principal
-```bash
-# Iniciar o jogo
-python3 chess_game.py
-
-# Durante o jogo:
-Digite seu movimento: e2-e4
-✅ Movimento realizado: e2-e4
-
-# Ver ajuda
-Digite seu movimento: help
-
-# Ver movimentos possíveis
-Digite seu movimento: moves
-
-# Sair do jogo
-Digite seu movimento: quit
+### Torre (FOR Loop)
+```c
+for (i = 1; i <= casas_torre; i++) {
+    printf("Casa %d: Direita\n", i);
+}
 ```
 
-### Demonstrações Educacionais
-```bash
-# Demonstração completa dos conceitos
-python3 concepts_demo.py
-
-# Exemplos educacionais detalhados
-python3 educational_examples.py
-
-# Exemplos básicos
-python3 example.py
+### Bispo (WHILE Loop)
+```c
+contador_bispo = 1;
+while (contador_bispo <= casas_bispo) {
+    printf("Casa %d: Cima, Direita\n", contador_bispo);
+    contador_bispo++;
+}
 ```
 
-## 🤝 Contribuição
+### Rainha (DO-WHILE Loop)
+```c
+contador_rainha = 1;
+do {
+    printf("Casa %d: Esquerda\n", contador_rainha);
+    contador_rainha++;
+} while (contador_rainha <= casas_rainha);
+```
 
-Este é um projeto educacional. Sinta-se livre para:
-- Reportar bugs
-- Sugerir melhorias
-- Implementar novas funcionalidades
-- Otimizar o código
+## 📁 Arquivos do Projeto
 
-## 📄 Licença
+- `xadrez.c` - Código fonte principal
+- `README.md` - Esta documentação
+- `README_C.md` - Documentação técnica detalhada
 
-Este projeto é de código aberto e pode ser usado livremente para fins educacionais.
+## 🎓 Conceitos Demonstrados
+
+1. **FOR Loop**: Controle preciso de iterações
+2. **WHILE Loop**: Repetição baseada em condição
+3. **DO-WHILE Loop**: Execução garantida pelo menos uma vez
+4. **Variáveis**: Uso de tipos inteiros
+5. **Saída Formatada**: Uso de printf
+6. **Comentários**: Documentação do código
+
+## ✅ Requisitos Não Funcionais
+
+- ✅ **Performance**: Código eficiente sem atrasos
+- ✅ **Documentação**: Comentários explicativos
+- ✅ **Legibilidade**: Código claro e organizado
+- ✅ **Variáveis**: Apenas tipos inteiros utilizados
+
+## 🏆 Resultado
+
+O programa demonstra com sucesso:
+- Uso correto das três estruturas de repetição
+- Simulação realista dos movimentos das peças
+- Saída formatada e clara
+- Código bem documentado e organizado
+
+Este projeto atende completamente aos requisitos do desafio de nível novato, demonstrando compreensão e aplicação prática das estruturas de repetição em C.
+
+## 🔗 Link do Repositório
+
+**https://github.com/DeividRodrigues/jogo_xadrez**
+
+O repositório contém apenas o código em C conforme especificado no desafio.
